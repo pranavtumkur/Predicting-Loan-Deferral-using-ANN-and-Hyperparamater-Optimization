@@ -180,5 +180,43 @@ There are many LendingClub data sets on Kaggle. Here is the information on this 
 6. 90% of people who have taken a loan live in houses which have been mortgaged or rented. Just 9.5% of the loan-takers hold ownership of their houses.
 
 ## Creating model
-8. 
+
+We make an ANN with the following properties-
+
+* 1 input layer with neurons = independent param
+* 1st hidden layer with dropout and neurons = independent param/2 and activation function as relu
+* 1st hidden layer with dropout and neurons = independent param/4 and activation function as relu
+* 1 output layer with 1 neuron and loss = binary crossentropy and optimizer as adam
+          
+ ## Model Evaluation
+ 
+ 1. No separation of loss (on training data) and validation loss (on testing data) graphs. Therefpre, no overfitting.
+ 2. 88% accuracy (This is moderately good, since the data is imbalanced 80-20)
+ 3. 85% and 88% precision for loans charged off and repaid resp.
+ 4. **Now comes the problematic one** - 48% recall for loans charged off (This is mainly due to the imbalanced dataset)
+
+## Hyperparameter Optimization
+
+Using GridSearchCV, we iterate through all combinations of the below configurations of the ANN
+
+* Hidden Layers
+  * 50
+  * 25
+  * 50,25
+  * 50,25,10
+  * 60,45,30,15
+  * 60,45,30,15,5
+* Activation Functions
+  * sigmoid
+  * relu
+* batch_size
+  * 500
+  * 256
+  * 128
+* Training Epochs
+  * 25
+  * 30
+
+## Reslult
+
 
