@@ -217,6 +217,8 @@ Using GridSearchCV, we iterate through all combinations of the below configurati
   * 25
   * 30
 
-## Reslult
+## Result of Hyperparameter Optimization
+
+
 
 
