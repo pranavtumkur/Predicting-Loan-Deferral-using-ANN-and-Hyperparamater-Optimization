@@ -219,6 +219,6 @@ Using GridSearchCV, we iterate through all combinations of the below configurati
 
 ## Result of Hyperparameter Optimization
 
-
+We have achieved a 4% increase in recall while maintaining the same 89% accuracy after using GridSearchCV
 
 
