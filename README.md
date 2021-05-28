@@ -197,6 +197,8 @@ We make an ANN with the following properties-
 
 ## Hyperparameter Optimization
 
+![1_gFf0CA52KN0Yb9sEd2TNJw (1)](https://user-images.githubusercontent.com/65482013/120003303-3e69a080-bff3-11eb-90b3-83c9f0aaebce.jpg)
+
 Using GridSearchCV, we iterate through all combinations of the below configurations of the ANN
 
 * Hidden Layers
@@ -233,6 +235,8 @@ We achieve a 4% increase in recall while maintaining the same 89% accuracy after
 So we try to feed our ML model better and more balanced data using- **oversampling**
 
 ## Oversampling
+
+![1_o_KfyMzF7LITK2DlYm_wHw (1)](https://user-images.githubusercontent.com/65482013/120003572-81c40f00-bff3-11eb-9ae1-dfe27a4deb81.jpg)
 
 We use SMOTTomek class from the imblearn library, to reshape our data to create equal no. of records/samples where loan was deferred and where it was repaid.
 
