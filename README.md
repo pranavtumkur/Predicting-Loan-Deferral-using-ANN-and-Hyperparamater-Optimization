@@ -219,6 +219,33 @@ Using GridSearchCV, we iterate through all combinations of the below configurati
 
 ## Result of Hyperparameter Optimization
 
-We have achieved a 4% increase in recall while maintaining the same 89% accuracy after using GridSearchCV
+We find that the best ANN (88.88% accuracy) for our data is with the following configuration-
+* Hidden Layers- 2
+* No. of neurons in hidden layers- 50, 25
+* Activation Function- relu for all hidden layers
+* Training Batch size- 128
+* Training epochs- 20
+
+We achieve a 4% increase in recall while maintaining the same 89% accuracy after using GridSearchCV to determing the best ANN
+
+**But this result of recall 47% for loan deferral cases is still not acceptable since it is quite low!** We already know that the reason for low recall of cases where loan was deferred, is due to the imbalance in the dataset for samples with loan repaid (very high) vs loan deferred cases (very low).
+
+So we try to feed our ML model better and more balanced data using- **oversampling**
+
+## Oversampling
+
+We use SMOTTomek class from the imblearn library, to reshape our data to create equal no. of records/samples where loan was deferred and where it was repaid.
+
+## Training and Evaluation of the model after Oversampling
+
+We use the optimal ANN obtained from GridSearchCV, to not train our model with the above reshaped data (after oversampling transformation).
+
+### This gives us wonderful results!
+
+Earlier we had 47% recall for loan deferred cases with 89% model accuracy
+
+## But now, we have **87% recall for loan deferred cases with 93% model accuracy!**
+
+This is a model good enough to deploy for all practical purposes!
 
 
