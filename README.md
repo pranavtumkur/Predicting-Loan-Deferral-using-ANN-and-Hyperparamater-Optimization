@@ -240,11 +240,9 @@ We use SMOTTomek class from the imblearn library, to reshape our data to create 
 
 We use the optimal ANN obtained from GridSearchCV, to not train our model with the above reshaped data (after oversampling transformation).
 
-### This gives us wonderful results!
+### This gives us wonderful results! Earlier we had 47% recall for loan deferred cases with 89% model accuracy.
 
-Earlier we had 47% recall for loan deferred cases with 89% model accuracy
-
-## But now, we have **87% recall for loan deferred cases with 93% model accuracy!**
+# But now, we have 87% recall for loan deferred cases with 93% model accuracy!
 
 This is a model good enough to deploy for all practical purposes!
 
