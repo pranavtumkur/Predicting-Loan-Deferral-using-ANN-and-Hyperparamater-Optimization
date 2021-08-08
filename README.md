@@ -201,7 +201,7 @@ We make an ANN with the following properties-
 
 Using GridSearchCV, we iterate through all combinations of the below configurations of the ANN
 
-* Hidden Layers
+* Hidden Layer and no. of neurons
   * 50
   * 25
   * 50,25
